@@ -59,6 +59,7 @@
     </dependencyManagement>
     <modules>
         <module>.decisionservice</module>
+        <module>Data</module>
         <module>Modelo de servicio DEMO</module>
     </modules>
 
