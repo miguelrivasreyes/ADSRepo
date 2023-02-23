@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>06d969f2-08ca-4202-a1c6-62f7cf2917be</uuid>
+  <locale>es_ES</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="es_ES"/>
+    </extensionElements>
+    <inputData id="node_0" name="Cliente">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Cliente" collection="false" name="Cliente"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Cliente" typeRef="Cliente"/>
+    </inputData>
+    <decision id="node_1" name="Evaluar cliente">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Cliente" collection="false" name="Cliente"/>
+                <output bomType="TarjetaDeCredito1" collection="false" name="Evaluar cliente"/>
+                <rule defaultRule="false" href="node_1/Por%20salario.dmt" kind="DecisionTable" name="Por salario"/>
+                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Evaluar cliente" typeRef="TarjetaDeCredito1"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

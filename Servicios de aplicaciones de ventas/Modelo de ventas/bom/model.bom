@@ -1,0 +1,63 @@
+
+
+public class Cliente
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "cliente"
+        property "de.generated" "true"
+{
+    public double salario
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "salario"
+                property update "true";
+    public string tipo
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "tipo"
+                property update "true";
+    public Cliente(double salario, string tipo)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Cliente()
+                property "dataio.default" "true";
+}
+
+public class TarjetaDeCredito1
+        property "ads.typeId" "2"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "tarjetaDeCredito1"
+        property "de.generated" "true"
+{
+    public TipoDeTarjeta tipo
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "tipo"
+                property update "true";
+    public TarjetaDeCredito1(TipoDeTarjeta tipo)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public TarjetaDeCredito1()
+                property "dataio.default" "true";
+}
+
+public class TipoDeTarjeta
+        extends java.lang.Enum
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "tipoDeTarjeta"
+        property "de.generated" "true"
+{
+    domain {static BLACK, static GOLD, static SILVER, static NINGUNA}
+    public static final readonly TipoDeTarjeta BLACK
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "BLACK";
+    public static final readonly TipoDeTarjeta GOLD
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "GOLD";
+    public static final readonly TipoDeTarjeta NINGUNA
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "NINGUNA";
+    public static final readonly TipoDeTarjeta SILVER
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "SILVER";
+}
+

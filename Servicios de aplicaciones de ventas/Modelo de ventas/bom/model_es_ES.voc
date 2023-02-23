@@ -1,0 +1,41 @@
+
+# Term: cliente
+@cliente#gender = MALE
+
+# Term: salario
+@salario#gender = MALE
+
+# Term: tipo
+@tipo#gender = MALE
+
+# Term: tipo de tarjeta
+@tipo\ de\ tarjeta#gender = MALE
+
+# Cliente
+Cliente#concept.documentation = Datos basicos del cliente
+Cliente#concept.label = cliente
+Cliente.Cliente(double,java.lang.String)#phrase.navigation = un nuevo {cliente} en que {0, salario} {1, tipo}
+Cliente.salario#phrase.action = cambiar el salario {this,PARTITIVE_ARTICLE} a {salario}
+Cliente.salario#phrase.addition_setter = añadir {salario} a el salario {this,PARTITIVE_ARTICLE}
+Cliente.salario#phrase.navigation = {salario} {this,PARTITIVE_ARTICLE}
+Cliente.salario#phrase.subtraction_setter = sustraer {salario} de el salario {this,PARTITIVE_ARTICLE}
+Cliente.tipo#phrase.action = cambiar el tipo {this,PARTITIVE_ARTICLE} a {tipo}
+Cliente.tipo#phrase.navigation = {tipo} {this,PARTITIVE_ARTICLE}
+
+# TarjetaDeCredito1
+TarjetaDeCredito1#concept.documentation = 
+TarjetaDeCredito1#concept.label = tarjeta de credito
+TarjetaDeCredito1.TarjetaDeCredito1(TipoDeTarjeta)#phrase.navigation = un nuevo {tarjeta de credito} en que {0, tipo}
+TarjetaDeCredito1.tipo#phrase.action = cambiar el tipo {this,PARTITIVE_ARTICLE} a {tipo}
+TarjetaDeCredito1.tipo#phrase.action.documentation = 
+TarjetaDeCredito1.tipo#phrase.clearer = borrar el tipo {this,PARTITIVE_ARTICLE}
+TarjetaDeCredito1.tipo#phrase.clearer.documentation = 
+TarjetaDeCredito1.tipo#phrase.navigation = {tipo} {this,PARTITIVE_ARTICLE}
+TarjetaDeCredito1.tipo#phrase.navigation.documentation = 
+
+# TipoDeTarjeta
+TipoDeTarjeta#concept.label = tipo de tarjeta
+TipoDeTarjeta.BLACK#instance.label = BLACK
+TipoDeTarjeta.GOLD#instance.label = GOLD
+TipoDeTarjeta.NINGUNA#instance.label = NINGUNA
+TipoDeTarjeta.SILVER#instance.label = SILVER
