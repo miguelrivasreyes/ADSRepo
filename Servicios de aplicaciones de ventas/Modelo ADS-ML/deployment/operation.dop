@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Modelo ADS-ML">
+  <name>Modelo-ADS-ML</name>
+  <uuid>ad156472-bd52-41b3-a632-52a8f1a947c4</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#679dc0d1-0988-41e5-9113-e01c7ef09995"/>
+  <targetRuleProject href="../../Modelo%20ADS-ML#b983f5b4-0519-40df-927b-2db0ee94b838"/>
+  <tags key="ProviderType">
+    <value><![CDATA[OPS]]></value>
+  </tags>
+  <tags key="ProviderId">
+    <value><![CDATA[disconnectedProvider]]></value>
+  </tags>
+</com.ibm.rules.studio.model.decisionservice:Operation>

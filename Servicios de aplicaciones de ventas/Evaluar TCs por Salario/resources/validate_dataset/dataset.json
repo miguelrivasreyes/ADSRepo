@@ -1,0 +1,22 @@
+{
+  "solicitud": {
+    "cantidadDePrestamos": 0,
+    "cantidadDeTarjetas": 1,
+    "clienteComercial": "TRUE",
+    "comision": "FALSE",
+    "deudaActualEnTarjetaDeCredito": 1256,
+    "educacion": "High School or Below",
+    "estadoCivil": "Single",
+    "estadoDelEmpleo": "Unemployed",
+    "importeDelPrestamo": 4150,
+    "ingreso": 45584,
+    "precioPromedioDelArea": 461656,
+    "scoreCrediticio": 717,
+    "sexo": "Female",
+    "solicitudEnLinea": "YES",
+    "tiempoEnElTrabajoActual": 2,
+    "tiempoEnLaDireccionActual": 19,
+    "tipoDeResidencia": "Private Renting",
+    "valorDeLaPropiedad": 467780
+  }
+}

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>decisionModel</name>
+  <uuid>2b12b3c9-6242-45b8-80fa-80456eba4cc5</uuid>
+  <locale>es_ES</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="decisions" name="diagram" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="es_ES"/>
+    </extensionElements>
+    <inputData id="node_0" name="Datos de cliente">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Cliente" collection="false" name="Datos de cliente"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_0_ii" name="Datos de cliente" typeRef="Cliente"/>
+    </inputData>
+    <decision id="node_1" name="Evaluar por salario">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Cliente" collection="false" name="Datos de cliente"/>
+                <output bomType="TarjetaDeCredito" collection="false" name="Evaluar por salario"/>
+                <rule defaultRule="false" href="node_1/Evaluar%20por%20salario.dmt" kind="DecisionTable" name="Evaluar por salario"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_1_ii" name="Evaluar por salario" typeRef="TarjetaDeCredito"/>
+        <informationRequirement>
+            <requiredInput href="#node_0"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

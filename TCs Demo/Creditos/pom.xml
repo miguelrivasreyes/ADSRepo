@@ -2,13 +2,13 @@
     <modelVersion>4.0.0</modelVersion>
 
     <parent>
-        <groupId>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas</groupId>
-        <artifactId>serviciosDeAplicacionesDeVentas</artifactId>
+        <groupId>cp4admin.banco_pichincha___demo_de_ads.tcs_demo</groupId>
+        <artifactId>TCsDemo</artifactId>
         <version>1.0.0-SNAPSHOT</version>
     </parent>
 
-    <groupId>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas</groupId>
-    <artifactId>evaluarTCsPorSalario</artifactId>
+    <groupId>cp4admin.banco_pichincha___demo_de_ads.tcs_demo</groupId>
+    <artifactId>creditos</artifactId>
     <version>LATEST-SNAPSHOT</version>
 
     <build>
@@ -26,26 +26,16 @@
                 <configuration>
                     <deployments>
                         <deployment>
-                            <name>Evaluar-TCs-por-Salario</name>
+                            <name>Creditos</name>
                         </deployment>
                     </deployments>
-                <packageName>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.evaluartcsporsalario</packageName>
+                <packageName>cp4admin.banco_pichincha___demo_de_ads.tcs_demo.creditos</packageName>
                 </configuration>
             </plugin>
         </plugins>
     </build>
 
 <dependencies>
-        <dependency>
-            <groupId>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas</groupId>
-            <artifactId>modeloDeVentas</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas</groupId>
-            <artifactId>modeloADS-ML</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
         <dependency>
             <groupId>com.ibm.decision</groupId>
             <artifactId>engine-compact-runtime</artifactId>

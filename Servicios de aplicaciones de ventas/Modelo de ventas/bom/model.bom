@@ -22,6 +22,144 @@ public class Cliente
                 property "dataio.default" "true";
 }
 
+public class Probabilidad
+        property "ads.typeId" "10"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "probabilidad"
+        property "de.generated" "true"
+{
+    public java.util.List porcentajes domain 0,* class double
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "porcentajes"
+                property update "true";
+    public java.lang.Long respuesta
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "respuesta"
+                property update "true";
+    public Probabilidad(java.util.List porcentajes domain 0,* class double, 
+        java.lang.Long respuesta)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Probabilidad()
+                property "dataio.default" "true";
+    public void addTo_porcentajes(double porcentajes)
+                property collectionAttribute "porcentajes"
+                property update "true";
+    public void clear_porcentajes()
+                property collectionAttribute "porcentajes"
+                property update "true";
+    public void removeFrom_porcentajes(double porcentajes)
+                property collectionAttribute "porcentajes"
+                property update "true";
+    public void set_porcentajes(java.util.Collection porcentajes domain 0,* class double)
+                property collectionAttribute "porcentajes"
+                property update "true";
+}
+
+public class Solicitud
+        property "ads.typeId" "4"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "solicitud"
+        property "de.generated" "true"
+{
+    public java.lang.Long cantidadDePrestamos
+                property "ads.attributeId" "10"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "cantidadDePrestamos"
+                property update "true";
+    public java.lang.Long cantidadDeTarjetas
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "cantidadDeTarjetas"
+                property update "true";
+    public string clienteComercial
+                property "ads.attributeId" "17"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "clienteComercial"
+                property update "true";
+    public string comision
+                property "ads.attributeId" "18"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "comision"
+                property update "true";
+    public double deudaActualEnTarjetaDeCredito
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "deudaActualEnTarjetaDeCredito"
+                property update "true";
+    public string educacion
+                property "ads.attributeId" "12"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "educacion"
+                property update "true";
+    public TipoDeEstadoCivil estadoCivil
+                property "ads.attributeId" "14"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "estadoCivil"
+                property update "true";
+    public string estadoDelEmpleo
+                property "ads.attributeId" "13"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "estadoDelEmpleo"
+                property update "true";
+    public double importeDelPrestamo
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "importeDelPrestamo"
+                property update "true";
+    public double ingreso
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "ingreso"
+                property update "true";
+    public double precioPromedioDelArea
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "precioPromedioDelArea"
+                property update "true";
+    public java.lang.Long scoreCrediticio
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "scoreCrediticio"
+                property update "true";
+    public TipoDeGenero sexo
+                property "ads.attributeId" "11"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "sexo"
+                property update "true";
+    public string solicitudEnLinea
+                property "ads.attributeId" "15"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "solicitudEnLinea"
+                property update "true";
+    public java.lang.Long tiempoEnElTrabajoActual
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "tiempoEnElTrabajoActual"
+                property update "true";
+    public java.lang.Long tiempoEnLaDireccionActual
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "tiempoEnLaDireccionActual"
+                property update "true";
+    public string tipoDeResidencia
+                property "ads.attributeId" "16"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "tipoDeResidencia"
+                property update "true";
+    public double valorDeLaPropiedad
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "valorDeLaPropiedad"
+                property update "true";
+    public Solicitud(java.lang.Long cantidadDePrestamos, 
+        java.lang.Long cantidadDeTarjetas, 
+        string clienteComercial, 
+        string comision, 
+        double deudaActualEnTarjetaDeCredito, 
+        string educacion, 
+        TipoDeEstadoCivil estadoCivil, 
+        string estadoDelEmpleo, 
+        double importeDelPrestamo, 
+        double ingreso, 
+        double precioPromedioDelArea, 
+        java.lang.Long scoreCrediticio, 
+        TipoDeGenero sexo, 
+        string solicitudEnLinea, 
+        java.lang.Long tiempoEnElTrabajoActual, 
+        java.lang.Long tiempoEnLaDireccionActual, 
+        string tipoDeResidencia, 
+        double valorDeLaPropiedad)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Solicitud()
+                property "dataio.default" "true";
+}
+
 public class TarjetaDeCredito1
         property "ads.typeId" "2"
         property "com.fasterxml.jackson.annotation.JsonTypeName" "tarjetaDeCredito1"
@@ -40,13 +178,88 @@ public class TarjetaDeCredito1
                 property "dataio.default" "true";
 }
 
+public class TipoDeEducacion
+        extends java.lang.Enum
+        property "ads.typeId" "8"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "tipoDeEducacion"
+        property "de.generated" "true"
+{
+    domain {static $$HighSchoolOrBelow$$, static bachelor, static college, static master}
+    public static final readonly TipoDeEducacion $$HighSchoolOrBelow$$
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "\\\"HighSchoolOrBelow\\\"";
+    public static final readonly TipoDeEducacion bachelor
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Bachelor";
+    public static final readonly TipoDeEducacion college
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "College";
+    public static final readonly TipoDeEducacion master
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Master";
+}
+
+public class TipoDeEstadoCivil
+        extends java.lang.Enum
+        property "ads.typeId" "6"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "tipoDeEstadoCivil"
+        property "de.generated" "true"
+{
+    domain {static divorced, static married, static single}
+    public static final readonly TipoDeEstadoCivil divorced
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Divorced";
+    public static final readonly TipoDeEstadoCivil married
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Married";
+    public static final readonly TipoDeEstadoCivil single
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Single";
+}
+
+public class TipoDeGenero
+        extends java.lang.Enum
+        property "ads.typeId" "9"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "tipoDeGenero"
+        property "de.generated" "true"
+{
+    domain {static female, static male}
+    public static final readonly TipoDeGenero female
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Female";
+    public static final readonly TipoDeGenero male
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Male";
+}
+
+public class TipoDeResidencia
+        extends java.lang.Enum
+        property "ads.typeId" "5"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "tipoDeResidencia"
+        property "de.generated" "true"
+{
+    domain {static $$LivingWithParents$guardian$$, static $$OwnerOccupier$$, static $$PrivateRenting$$, static $$PublicHousing$$}
+    public static final readonly TipoDeResidencia $$LivingWithParents$guardian$$
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "\\\"LivingWithParents/guardian\\\"";
+    public static final readonly TipoDeResidencia $$OwnerOccupier$$
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "\\\"OwnerOccupier\\\"";
+    public static final readonly TipoDeResidencia $$PrivateRenting$$
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "\\\"PrivateRenting\\\"";
+    public static final readonly TipoDeResidencia $$PublicHousing$$
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "\\\"PublicHousing\\\"";
+}
+
 public class TipoDeTarjeta
         extends java.lang.Enum
         property "ads.typeId" "3"
         property "com.fasterxml.jackson.annotation.JsonTypeName" "tipoDeTarjeta"
         property "de.generated" "true"
 {
-    domain {static BLACK, static GOLD, static SILVER, static NINGUNA}
+    domain {static BLACK, static GOLD, static NINGUNA, static SILVER}
     public static final readonly TipoDeTarjeta BLACK
                 property "ads.attributeId" "3"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "BLACK";
@@ -59,5 +272,26 @@ public class TipoDeTarjeta
     public static final readonly TipoDeTarjeta SILVER
                 property "ads.attributeId" "1"
                 property "com.fasterxml.jackson.annotation.JsonProperty" "SILVER";
+}
+
+public class TipoEstadoDeEmpleo
+        extends java.lang.Enum
+        property "ads.typeId" "7"
+        property "com.fasterxml.jackson.annotation.JsonTypeName" "tipoEstadoDeEmpleo"
+        property "de.generated" "true"
+{
+    domain {static $$MedicalLeave$$, static disabled, static employed, static unemployed}
+    public static final readonly TipoEstadoDeEmpleo $$MedicalLeave$$
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "\\\"MedicalLeave\\\"";
+    public static final readonly TipoEstadoDeEmpleo disabled
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Disabled";
+    public static final readonly TipoEstadoDeEmpleo employed
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Employed";
+    public static final readonly TipoEstadoDeEmpleo unemployed
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "Unemployed";
 }
 

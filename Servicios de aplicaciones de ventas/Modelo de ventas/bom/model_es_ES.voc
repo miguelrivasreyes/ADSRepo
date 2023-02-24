@@ -2,14 +2,62 @@
 # Term: cliente
 @cliente#gender = MALE
 
+# Term: cliente comercial
+@cliente\ comercial#gender = MALE
+
+# Term: estado civil
+@estado\ civil#gender = MALE
+
+# Term: estado del empleo
+@estado\ del\ empleo#gender = MALE
+
+# Term: importe del prestamo
+@importe\ del\ prestamo#gender = MALE
+
+# Term: porcentaje
+@porcentaje#gender = MALE
+
+# Term: precio promedio del area
+@precio\ promedio\ del\ area#gender = MALE
+
 # Term: salario
 @salario#gender = MALE
+
+# Term: score crediticio
+@score\ crediticio#gender = MALE
+
+# Term: sexo
+@sexo#gender = MALE
+
+# Term: tiempo en el trabajo actual
+@tiempo\ en\ el\ trabajo\ actual#gender = MALE
+
+# Term: tiempo en la direccion actual
+@tiempo\ en\ la\ direccion\ actual#gender = FEMALE
 
 # Term: tipo
 @tipo#gender = MALE
 
+# Term: tipo de educacion
+@tipo\ de\ educacion#gender = MALE
+
+# Term: tipo de estado civil
+@tipo\ de\ estado\ civil#gender = MALE
+
+# Term: tipo de genero
+@tipo\ de\ genero#gender = MALE
+
+# Term: tipo de residencia
+@tipo\ de\ residencia#gender = MALE
+
 # Term: tipo de tarjeta
 @tipo\ de\ tarjeta#gender = MALE
+
+# Term: tipo estado de empleo
+@tipo\ estado\ de\ empleo#gender = MALE
+
+# Term: valor de la propiedad
+@valor\ de\ la\ propiedad#gender = MALE
 
 # Cliente
 Cliente#concept.documentation = Datos basicos del cliente
@@ -22,6 +70,81 @@ Cliente.salario#phrase.subtraction_setter = sustraer {salario} de el salario {th
 Cliente.tipo#phrase.action = cambiar el tipo {this,PARTITIVE_ARTICLE} a {tipo}
 Cliente.tipo#phrase.navigation = {tipo} {this,PARTITIVE_ARTICLE}
 
+# Probabilidad
+Probabilidad#concept.label = probabilidad
+Probabilidad.Probabilidad(java.util.List,java.lang.Long)#phrase.navigation = una nueva {probabilidad} en que {0, porcentaje} {1, respuesta}
+Probabilidad.addTo_porcentajes(double)#phrase.action = agregar {0} en los porcentajes {this,PARTITIVE_ARTICLE}
+Probabilidad.clear_porcentajes()#phrase.action = vaciar los porcentajes {this,PARTITIVE_ARTICLE}
+Probabilidad.porcentajes#phrase.action = cambiar el porcentaje {this,PARTITIVE_ARTICLE} a {porcentaje}
+Probabilidad.porcentajes#phrase.navigation = {porcentaje} {this,PARTITIVE_ARTICLE}
+Probabilidad.removeFrom_porcentajes(double)#phrase.action = quitar {0} de los porcentajes {this,PARTITIVE_ARTICLE}
+Probabilidad.respuesta#phrase.action = cambiar la respuesta {this,PARTITIVE_ARTICLE} a {respuesta}
+Probabilidad.respuesta#phrase.addition_setter = añadir {respuesta} a la respuesta {this,PARTITIVE_ARTICLE}
+Probabilidad.respuesta#phrase.navigation = {respuesta} {this,PARTITIVE_ARTICLE}
+Probabilidad.respuesta#phrase.subtraction_setter = sustraer {respuesta} de la respuesta {this,PARTITIVE_ARTICLE}
+
+# Solicitud
+Solicitud#concept.label = solicitud
+Solicitud.Solicitud(java.lang.Long,java.lang.Long,java.lang.String,java.lang.String,double,java.lang.String,TipoDeEstadoCivil,java.lang.String,double,double,double,java.lang.Long,TipoDeGenero,java.lang.String,java.lang.Long,java.lang.Long,java.lang.String,double)#phrase.navigation = una nueva {solicitud} en que {0, cantidad de prestamos} {1, cantidad de tarjetas} {2, cliente comercial} {3, comision} {4, deuda actual en tarjeta de credito} {5, educacion} {6, estado civil} {7, estado del empleo} {8, importe del prestamo} {9, ingreso} {10, precio promedio del area} {11, score crediticio} {12, sexo} {13, solicitud en linea} {14, tiempo en el trabajo actual} {15, tiempo en la direccion actual} {16, tipo de residencia} {17, valor de la propiedad}
+Solicitud.cantidadDePrestamos#phrase.action = cambiar la cantidad de prestamos {this,PARTITIVE_ARTICLE} a {cantidad de prestamos}
+Solicitud.cantidadDePrestamos#phrase.addition_setter = añadir {cantidad de prestamos} a la cantidad de prestamos {this,PARTITIVE_ARTICLE}
+Solicitud.cantidadDePrestamos#phrase.navigation = {cantidad de prestamos} {this,PARTITIVE_ARTICLE}
+Solicitud.cantidadDePrestamos#phrase.subtraction_setter = sustraer {cantidad de prestamos} de la cantidad de prestamos {this,PARTITIVE_ARTICLE}
+Solicitud.cantidadDeTarjetas#phrase.action = cambiar la cantidad de tarjetas {this,PARTITIVE_ARTICLE} a {cantidad de tarjetas}
+Solicitud.cantidadDeTarjetas#phrase.addition_setter = añadir {cantidad de tarjetas} a la cantidad de tarjetas {this,PARTITIVE_ARTICLE}
+Solicitud.cantidadDeTarjetas#phrase.navigation = {cantidad de tarjetas} {this,PARTITIVE_ARTICLE}
+Solicitud.cantidadDeTarjetas#phrase.subtraction_setter = sustraer {cantidad de tarjetas} de la cantidad de tarjetas {this,PARTITIVE_ARTICLE}
+Solicitud.clienteComercial#phrase.action = cambiar el cliente comercial {this,PARTITIVE_ARTICLE} a {cliente comercial}
+Solicitud.clienteComercial#phrase.navigation = {cliente comercial} {this,PARTITIVE_ARTICLE}
+Solicitud.comision#phrase.action = cambiar la comisión {this, PARTITIVE_ARTICLE} a {comision}
+Solicitud.comision#phrase.navigation = {comision} {this,PARTITIVE_ARTICLE}
+Solicitud.deudaActualEnTarjetaDeCredito#phrase.action = cambiar la deuda actual en tarjeta de credito {this,PARTITIVE_ARTICLE} a {deuda actual en tarjeta de credito}
+Solicitud.deudaActualEnTarjetaDeCredito#phrase.addition_setter = añadir {deuda actual en tarjeta de credito} a la deuda actual en tarjeta de credito {this,PARTITIVE_ARTICLE}
+Solicitud.deudaActualEnTarjetaDeCredito#phrase.navigation = {deuda actual en tarjeta de credito} {this,PARTITIVE_ARTICLE}
+Solicitud.deudaActualEnTarjetaDeCredito#phrase.subtraction_setter = sustraer {deuda actual en tarjeta de credito} de la deuda actual en tarjeta de credito {this,PARTITIVE_ARTICLE}
+Solicitud.educacion#phrase.action = cambiar la educación {this, PARTITIVE_ARTICLE} a {educacion}
+Solicitud.educacion#phrase.navigation = {educacion} {this,PARTITIVE_ARTICLE}
+Solicitud.estadoCivil#phrase.action = cambiar el estado civil {this,PARTITIVE_ARTICLE} a {estado civil}
+Solicitud.estadoCivil#phrase.clearer = borrar el estado civil {this,PARTITIVE_ARTICLE}
+Solicitud.estadoCivil#phrase.navigation = {estado civil} {this,PARTITIVE_ARTICLE}
+Solicitud.estadoDelEmpleo#phrase.action = cambiar el estado del empleo {this,PARTITIVE_ARTICLE} a {estado del empleo}
+Solicitud.estadoDelEmpleo#phrase.navigation = {estado del empleo} {this,PARTITIVE_ARTICLE}
+Solicitud.importeDelPrestamo#phrase.action = cambiar el importe del prestamo {this,PARTITIVE_ARTICLE} a {importe del prestamo}
+Solicitud.importeDelPrestamo#phrase.addition_setter = añadir {importe del prestamo} a el importe del prestamo {this,PARTITIVE_ARTICLE}
+Solicitud.importeDelPrestamo#phrase.navigation = {importe del prestamo} {this,PARTITIVE_ARTICLE}
+Solicitud.importeDelPrestamo#phrase.subtraction_setter = sustraer {importe del prestamo} de el importe del prestamo {this,PARTITIVE_ARTICLE}
+Solicitud.ingreso#phrase.action = cambiar el ingreso {this,PARTITIVE_ARTICLE} a {ingreso}
+Solicitud.ingreso#phrase.addition_setter = añadir {ingreso} a el ingreso {this,PARTITIVE_ARTICLE}
+Solicitud.ingreso#phrase.navigation = {ingreso} {this,PARTITIVE_ARTICLE}
+Solicitud.ingreso#phrase.subtraction_setter = sustraer {ingreso} de el ingreso {this,PARTITIVE_ARTICLE}
+Solicitud.precioPromedioDelArea#phrase.action = cambiar el precio promedio del area {this,PARTITIVE_ARTICLE} a {precio promedio del area}
+Solicitud.precioPromedioDelArea#phrase.addition_setter = añadir {precio promedio del area} a el precio promedio del area {this,PARTITIVE_ARTICLE}
+Solicitud.precioPromedioDelArea#phrase.navigation = {precio promedio del area} {this,PARTITIVE_ARTICLE}
+Solicitud.precioPromedioDelArea#phrase.subtraction_setter = sustraer {precio promedio del area} de el precio promedio del area {this,PARTITIVE_ARTICLE}
+Solicitud.scoreCrediticio#phrase.action = cambiar el score crediticio {this,PARTITIVE_ARTICLE} a {score crediticio}
+Solicitud.scoreCrediticio#phrase.addition_setter = añadir {score crediticio} a el score crediticio {this,PARTITIVE_ARTICLE}
+Solicitud.scoreCrediticio#phrase.navigation = {score crediticio} {this,PARTITIVE_ARTICLE}
+Solicitud.scoreCrediticio#phrase.subtraction_setter = sustraer {score crediticio} de el score crediticio {this,PARTITIVE_ARTICLE}
+Solicitud.sexo#phrase.action = cambiar el sexo {this,PARTITIVE_ARTICLE} a {sexo}
+Solicitud.sexo#phrase.clearer = borrar el sexo {this,PARTITIVE_ARTICLE}
+Solicitud.sexo#phrase.navigation = {sexo} {this,PARTITIVE_ARTICLE}
+Solicitud.solicitudEnLinea#phrase.action = cambiar la solicitud en linea {this,PARTITIVE_ARTICLE} a {solicitud en linea}
+Solicitud.solicitudEnLinea#phrase.navigation = {solicitud en linea} {this,PARTITIVE_ARTICLE}
+Solicitud.tiempoEnElTrabajoActual#phrase.action = cambiar el tiempo en el trabajo actual {this,PARTITIVE_ARTICLE} a {tiempo en el trabajo actual}
+Solicitud.tiempoEnElTrabajoActual#phrase.addition_setter = añadir {tiempo en el trabajo actual} a el tiempo en el trabajo actual {this,PARTITIVE_ARTICLE}
+Solicitud.tiempoEnElTrabajoActual#phrase.navigation = {tiempo en el trabajo actual} {this,PARTITIVE_ARTICLE}
+Solicitud.tiempoEnElTrabajoActual#phrase.subtraction_setter = sustraer {tiempo en el trabajo actual} de el tiempo en el trabajo actual {this,PARTITIVE_ARTICLE}
+Solicitud.tiempoEnLaDireccionActual#phrase.action = cambiar la tiempo en la dirección actual {this,PARTITIVE_ARTICLE} a {tiempo en la direccion actual}
+Solicitud.tiempoEnLaDireccionActual#phrase.addition_setter = añadir {tiempo en la direccion actual} a la tiempo en la dirección actual {this,PARTITIVE_ARTICLE}
+Solicitud.tiempoEnLaDireccionActual#phrase.navigation = {tiempo en la direccion actual} {this,PARTITIVE_ARTICLE}
+Solicitud.tiempoEnLaDireccionActual#phrase.subtraction_setter = sustraer {tiempo en la direccion actual} de la tiempo en la dirección actual {this,PARTITIVE_ARTICLE}
+Solicitud.tipoDeResidencia#phrase.action = cambiar el tipo de residencia {this,PARTITIVE_ARTICLE} a {tipo de residencia}
+Solicitud.tipoDeResidencia#phrase.navigation = {tipo de residencia} {this,PARTITIVE_ARTICLE}
+Solicitud.valorDeLaPropiedad#phrase.action = cambiar el valor de la propiedad {this,PARTITIVE_ARTICLE} a {valor de la propiedad}
+Solicitud.valorDeLaPropiedad#phrase.addition_setter = añadir {valor de la propiedad} a el valor de la propiedad {this,PARTITIVE_ARTICLE}
+Solicitud.valorDeLaPropiedad#phrase.navigation = {valor de la propiedad} {this,PARTITIVE_ARTICLE}
+Solicitud.valorDeLaPropiedad#phrase.subtraction_setter = sustraer {valor de la propiedad} de el valor de la propiedad {this,PARTITIVE_ARTICLE}
+
 # TarjetaDeCredito1
 TarjetaDeCredito1#concept.documentation = 
 TarjetaDeCredito1#concept.label = tarjeta de credito
@@ -33,9 +156,42 @@ TarjetaDeCredito1.tipo#phrase.clearer.documentation =
 TarjetaDeCredito1.tipo#phrase.navigation = {tipo} {this,PARTITIVE_ARTICLE}
 TarjetaDeCredito1.tipo#phrase.navigation.documentation = 
 
+# TipoDeEducacion
+TipoDeEducacion#concept.label = tipo de educacion
+TipoDeEducacion.$$HighSchoolOrBelow$$#instance.label = "High School or Below"
+TipoDeEducacion.bachelor#instance.label = Bachelor
+TipoDeEducacion.college#instance.label = College
+TipoDeEducacion.master#instance.label = Master
+
+# TipoDeEstadoCivil
+TipoDeEstadoCivil#concept.documentation = 
+TipoDeEstadoCivil#concept.label = tipo de estado civil
+TipoDeEstadoCivil.divorced#instance.label = Divorced
+TipoDeEstadoCivil.married#instance.label = Married
+TipoDeEstadoCivil.single#instance.label = Single
+
+# TipoDeGenero
+TipoDeGenero#concept.label = tipo de genero
+TipoDeGenero.female#instance.label = Female
+TipoDeGenero.male#instance.label = Male
+
+# TipoDeResidencia
+TipoDeResidencia#concept.label = tipo de residencia
+TipoDeResidencia.$$LivingWithParents$guardian$$#instance.label = "Living with parents/guardian"
+TipoDeResidencia.$$OwnerOccupier$$#instance.label = "Owner Occupier"
+TipoDeResidencia.$$PrivateRenting$$#instance.label = "Private Renting"
+TipoDeResidencia.$$PublicHousing$$#instance.label = "Public Housing"
+
 # TipoDeTarjeta
 TipoDeTarjeta#concept.label = tipo de tarjeta
 TipoDeTarjeta.BLACK#instance.label = BLACK
 TipoDeTarjeta.GOLD#instance.label = GOLD
 TipoDeTarjeta.NINGUNA#instance.label = NINGUNA
 TipoDeTarjeta.SILVER#instance.label = SILVER
+
+# TipoEstadoDeEmpleo
+TipoEstadoDeEmpleo#concept.label = tipo estado de empleo
+TipoEstadoDeEmpleo.$$MedicalLeave$$#instance.label = "Medical Leave"
+TipoEstadoDeEmpleo.disabled#instance.label = Disabled
+TipoEstadoDeEmpleo.employed#instance.label = Employed
+TipoEstadoDeEmpleo.unemployed#instance.label = Unemployed

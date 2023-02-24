@@ -1,0 +1,95 @@
+{
+  "id" : "1",
+  "type" : "struct",
+  "fields" : [ {
+    "name" : "INCOME",
+    "type" : "float64",
+    "nullable" : true,
+    "jsonName" : "INCOME"
+  }, {
+    "name" : "YRS_AT_CURRENT_ADDRESS",
+    "type" : "int64",
+    "nullable" : true,
+    "jsonName" : "YRS_AT_CURRENT_ADDRESS"
+  }, {
+    "name" : "YRS_WITH_CURRENT_EMPLOYER",
+    "type" : "int64",
+    "nullable" : true,
+    "jsonName" : "YRS_WITH_CURRENT_EMPLOYER"
+  }, {
+    "name" : "NUMBER_OF_CARDS",
+    "type" : "int64",
+    "nullable" : true,
+    "jsonName" : "NUMBER_OF_CARDS"
+  }, {
+    "name" : "CREDITCARD_DEBT",
+    "type" : "float64",
+    "nullable" : true,
+    "jsonName" : "CREDITCARD_DEBT"
+  }, {
+    "name" : "LOAN_AMOUNT",
+    "type" : "float64",
+    "nullable" : true,
+    "jsonName" : "LOAN_AMOUNT"
+  }, {
+    "name" : "CREDIT_SCORE",
+    "type" : "int64",
+    "nullable" : true,
+    "jsonName" : "CREDIT_SCORE"
+  }, {
+    "name" : "PROPERTY_VALUE",
+    "type" : "float64",
+    "nullable" : true,
+    "jsonName" : "PROPERTY_VALUE"
+  }, {
+    "name" : "AREA_AVG_PRICE",
+    "type" : "float64",
+    "nullable" : true,
+    "jsonName" : "AREA_AVG_PRICE"
+  }, {
+    "name" : "LOANS",
+    "type" : "int64",
+    "nullable" : true,
+    "jsonName" : "LOANS"
+  }, {
+    "name" : "GENDER",
+    "type" : "object",
+    "nullable" : true,
+    "jsonName" : "GENDER"
+  }, {
+    "name" : "EDUCATION",
+    "type" : "object",
+    "nullable" : true,
+    "jsonName" : "EDUCATION"
+  }, {
+    "name" : "EMPLOYMENT_STATUS",
+    "type" : "object",
+    "nullable" : true,
+    "jsonName" : "EMPLOYMENT_STATUS"
+  }, {
+    "name" : "MARITAL_STATUS",
+    "type" : "object",
+    "nullable" : true,
+    "jsonName" : "MARITAL_STATUS"
+  }, {
+    "name" : "APPLIEDONLINE",
+    "type" : "object",
+    "nullable" : true,
+    "jsonName" : "APPLIEDONLINE"
+  }, {
+    "name" : "RESIDENCE",
+    "type" : "object",
+    "nullable" : true,
+    "jsonName" : "RESIDENCE"
+  }, {
+    "name" : "COMMERCIAL_CLIENT",
+    "type" : "object",
+    "nullable" : true,
+    "jsonName" : "COMMERCIAL_CLIENT"
+  }, {
+    "name" : "COMM_FRAUD_INV",
+    "type" : "object",
+    "nullable" : true,
+    "jsonName" : "COMM_FRAUD_INV"
+  } ]
+}

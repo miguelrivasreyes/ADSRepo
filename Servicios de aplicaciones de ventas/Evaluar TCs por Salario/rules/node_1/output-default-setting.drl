@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
-  <name>output-default-setting</name>
-  <uuid>5cdc15b9-5c04-4b2f-9a94-21289150e56c</uuid>
-  <locale>es_ES</locale>
-  <definition><![CDATA[asignar a decisión un nuevo tarjeta de credito en que
-		el tipo es NINGUNA ;]]></definition>
-</ilog.rules.studio.model.brl:ActionRule>

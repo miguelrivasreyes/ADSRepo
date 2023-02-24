@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ilog.rules.studio.model.base:RuleProject xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" xmlns:ilog.rules.studio.model.base="http://ilog.rules.studio/model/base.ecore" xmlns:ilog.rules.studio.model.bom="http://ilog.rules.studio/model/bom.ecore" xmlns:ilog.rules.studio.model.query="http://ilog.rules.studio/model/query.ecore" xmlns:ilog.rules.studio.model.xom="http://ilog.rules.studio/model/xom.ecore" buildMode="DecisionEngine" isADecisionService="true" projectKind="DecisionModel" projectVersion="1.0.0">
-  <name>Evaluar TCs por Salario</name>
-  <uuid>f9b959ad-8e3d-429a-89a6-d6d2f188fa7c</uuid>
+  <name>Modelo ADS-ML</name>
+  <uuid>b983f5b4-0519-40df-927b-2db0ee94b838</uuid>
   <outputLocation>output</outputLocation>
   <categories>any</categories>
   <paths xsi:type="ilog.rules.studio.model.xom:XOMPath" pathID="XOM">
@@ -9,7 +9,7 @@
   </paths>
   <paths xsi:type="ilog.rules.studio.model.bom:BOMPath" pathID="BOM">
     <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas:modeloDeVentas#LATEST-SNAPSHOT" packageId="cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas:modeloDeVentas" version="LATEST-SNAPSHOT"/>
-    <entries xsi:type="ilog.rules.studio.model.bom:DecisionLibraryBOMEntry" name="cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas:modeloADS-ML#LATEST-SNAPSHOT" packageId="cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas:modeloADS-ML" version="LATEST-SNAPSHOT"/>
+    <entries xsi:type="ilog.rules.studio.model.bom:BOMEntry" name="model" url="platform:/Modelo ADS-ML/bom/model.bom"/>
   </paths>
   <modelFolders xsi:type="ilog.rules.studio.model.base:SourceFolder">
     <name>rules</name>
@@ -32,5 +32,4 @@
   <modelFolders xsi:type="com.ibm.rules.studio.model.decisionservice:OperationFolder">
     <name>deployment</name>
   </modelFolders>
-  <documentation><![CDATA[]]></documentation>
 </ilog.rules.studio.model.base:RuleProject>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ilog.rules.studio.model.brl:ActionRule xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:ilog.rules.studio.model.brl="http://ilog.rules.studio/model/brl.ecore">
+  <name>output-default-setting</name>
+  <uuid>1a782498-0ee0-4336-b9aa-0de67c93dabf</uuid>
+  <locale>es_ES</locale>
+  <definition><![CDATA[asignar a decisión un nuevo Entrada del modelo mL en que 
+		el appliedonline es la solicitud en linea , 
+		la area avg price es el precio promedio del area , 
+		el comm fraud inv es el comision , 
+		el commercial client es el cliente comercial , 
+		el credit score es el score crediticio , 
+		la creditcard debt es la deuda actual en tarjeta de credito , 
+		el educatión es el educacion , 
+		el employment status es el estado del empleo , 
+		el gender es el sexo , 
+		el income es el ingreso , 
+		el loan amount es el importe del prestamo , 
+		el loans es la cantidad de prestamos , 
+		el marital status es el estado civil , 
+		el number of cards es la cantidad de tarjetas , 
+		el property value es el valor de la propiedad , 
+		el residence es el tipo de residencia , 
+		el yrs at current address es la tiempo en la direccion actual , 
+		el yrs with current employer es el tiempo en el trabajo actual ;]]></definition>
+</ilog.rules.studio.model.brl:ActionRule>

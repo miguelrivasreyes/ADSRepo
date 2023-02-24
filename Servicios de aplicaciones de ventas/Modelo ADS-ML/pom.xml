@@ -8,7 +8,7 @@
     </parent>
 
     <groupId>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas</groupId>
-    <artifactId>evaluarTCsPorSalario</artifactId>
+    <artifactId>modeloADS-ML</artifactId>
     <version>LATEST-SNAPSHOT</version>
 
     <build>
@@ -26,10 +26,10 @@
                 <configuration>
                     <deployments>
                         <deployment>
-                            <name>Evaluar-TCs-por-Salario</name>
+                            <name>Modelo-ADS-ML</name>
                         </deployment>
                     </deployments>
-                <packageName>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.evaluartcsporsalario</packageName>
+                <packageName>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML</packageName>
                 </configuration>
             </plugin>
         </plugins>
@@ -39,11 +39,6 @@
         <dependency>
             <groupId>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas</groupId>
             <artifactId>modeloDeVentas</artifactId>
-            <version>LATEST-SNAPSHOT</version>
-        </dependency>
-        <dependency>
-            <groupId>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas</groupId>
-            <artifactId>modeloADS-ML</artifactId>
             <version>LATEST-SNAPSHOT</version>
         </dependency>
         <dependency>

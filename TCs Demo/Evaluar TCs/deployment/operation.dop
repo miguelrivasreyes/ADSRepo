@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionservice:Operation xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionservice="http://com.ibm.rules.studio/model/decisionservice.ecore" rulesetName="operation" targetRuleProjectName="Evaluar TCs">
+  <name>Evaluar-TCs</name>
+  <uuid>dacfdc33-2dfc-4ca4-85bb-53509bcd7dc8</uuid>
+  <decisionModel href="../rules/decisionModel.dmo#2b12b3c9-6242-45b8-80fa-80456eba4cc5"/>
+  <targetRuleProject href="../../Evaluar%20TCs#a1925e97-a6e8-4b12-8a5d-6c12653d4de7"/>
+</com.ibm.rules.studio.model.decisionservice:Operation>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas</groupId>
-    <artifactId>serviciosDeAplicacionesDeVentas</artifactId>
+    <groupId>cp4admin.banco_pichincha___demo_de_ads.tcs_demo</groupId>
+    <artifactId>TCsDemo</artifactId>
     <version>1.0.0-SNAPSHOT</version>
 
     <packaging>pom</packaging>
@@ -59,9 +59,8 @@
     </dependencyManagement>
     <modules>
         <module>.decisionservice</module>
-        <module>Evaluar TCs por Salario</module>
-        <module>Modelo ADS-ML</module>
-        <module>Modelo de ventas</module>
+        <module>Creditos</module>
+        <module>Evaluar TCs</module>
     </modules>
 
     <build>

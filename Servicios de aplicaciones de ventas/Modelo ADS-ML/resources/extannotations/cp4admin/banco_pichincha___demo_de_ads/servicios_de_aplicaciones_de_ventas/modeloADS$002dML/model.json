@@ -1,0 +1,100 @@
+{
+  "metadata" : {
+    "id" : "a1ec59b4-b5b8-476e-a803-0f22d3325412",
+    "name" : "Mortgage Approval Prediction Model",
+    "modified_at" : "2023-01-28T17:00:52.251Z",
+    "created_at" : "2023-01-28T16:26:51.279Z",
+    "owner" : "IBMid-6650004LYA",
+    "space_id" : "63cd4640-6ada-43b0-bb0c-a26eadc9bc88",
+    "tags" : [ "mortgage_prediction_pipeline_tag" ]
+  },
+  "entity" : {
+    "custom" : { },
+    "label_column" : "MORTGAGE_APPROVAL",
+    "type" : "scikit-learn_1.0",
+    "schemas" : {
+      "input" : [ {
+        "id" : "1",
+        "type" : "struct",
+        "fields" : [ {
+          "name" : "INCOME",
+          "type" : "float64",
+          "nullable" : true
+        }, {
+          "name" : "YRS_AT_CURRENT_ADDRESS",
+          "type" : "int64",
+          "nullable" : true
+        }, {
+          "name" : "YRS_WITH_CURRENT_EMPLOYER",
+          "type" : "int64",
+          "nullable" : true
+        }, {
+          "name" : "NUMBER_OF_CARDS",
+          "type" : "int64",
+          "nullable" : true
+        }, {
+          "name" : "CREDITCARD_DEBT",
+          "type" : "float64",
+          "nullable" : true
+        }, {
+          "name" : "LOAN_AMOUNT",
+          "type" : "float64",
+          "nullable" : true
+        }, {
+          "name" : "CREDIT_SCORE",
+          "type" : "int64",
+          "nullable" : true
+        }, {
+          "name" : "PROPERTY_VALUE",
+          "type" : "float64",
+          "nullable" : true
+        }, {
+          "name" : "AREA_AVG_PRICE",
+          "type" : "float64",
+          "nullable" : true
+        }, {
+          "name" : "LOANS",
+          "type" : "int64",
+          "nullable" : true
+        }, {
+          "name" : "GENDER",
+          "type" : "object",
+          "nullable" : true
+        }, {
+          "name" : "EDUCATION",
+          "type" : "object",
+          "nullable" : true
+        }, {
+          "name" : "EMPLOYMENT_STATUS",
+          "type" : "object",
+          "nullable" : true
+        }, {
+          "name" : "MARITAL_STATUS",
+          "type" : "object",
+          "nullable" : true
+        }, {
+          "name" : "APPLIEDONLINE",
+          "type" : "object",
+          "nullable" : true
+        }, {
+          "name" : "RESIDENCE",
+          "type" : "object",
+          "nullable" : true
+        }, {
+          "name" : "COMMERCIAL_CLIENT",
+          "type" : "object",
+          "nullable" : true
+        }, {
+          "name" : "COMM_FRAUD_INV",
+          "type" : "object",
+          "nullable" : true
+        } ]
+      } ],
+      "output" : [ ]
+    }
+  },
+  "id" : "a1ec59b4-b5b8-476e-a803-0f22d3325412",
+  "name" : "Mortgage Approval Prediction Model",
+  "trainedAt" : "2023-01-28T16:26:51.279Z",
+  "modifiedAt" : "2023-01-28T17:00:52.251Z"
+}

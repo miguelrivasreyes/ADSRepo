@@ -4,4 +4,13 @@
   <uuid>d3ceaf89-e8cc-4af3-816b-027904c03ce2</uuid>
   <decisionModel href="../rules/decisionModel.dmo#06d969f2-08ca-4202-a1c6-62f7cf2917be"/>
   <targetRuleProject href="../../Evaluar%20TCs%20por%20Salario#f9b959ad-8e3d-429a-89a6-d6d2f188fa7c"/>
+  <tags key="operationDescription">
+    <value><![CDATA[""]]></value>
+  </tags>
+  <tags key="operationName">
+    <value><![CDATA["Evaluar-TCs-por-Salario"]]></value>
+  </tags>
+  <tags key="exposedAtRuntime">
+    <value><![CDATA[true]]></value>
+  </tags>
 </com.ibm.rules.studio.model.decisionservice:Operation>

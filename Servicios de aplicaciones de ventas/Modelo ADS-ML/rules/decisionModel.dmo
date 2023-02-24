@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<com.ibm.rules.studio.model.decisionmodel:DecisionModel xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:com.ibm.rules.studio.model.decisionmodel="http://com.ibm.rules.studio/model/decisionmodel.ecore">
+  <name>Modelo ADS-ML</name>
+  <uuid>679dc0d1-0988-41e5-9113-e01c7ef09995</uuid>
+  <locale>es_ES</locale>
+  <definition><definitions xmlns="http://www.omg.org/spec/DMN/20180521/MODEL/" id="Decisions" name="modeloADS-ML" namespace="">
+    <extensionElements>
+        <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="es_ES"/>
+    </extensionElements>
+    <inputData id="input" name="Solicitud">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Solicitud" collection="false" name="Solicitud"/>
+            </initialization>
+        </extensionElements>
+        <variable id="input_ii" name="Solicitud" typeRef="Solicitud"/>
+    </inputData>
+    <decision id="input-mapping" name="Mapeo de datos">
+        <description>Entrada de modelo ML</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Solicitud" collection="false" name="Solicitud"/>
+                <output bomType="cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML.Input" collection="false" name="Mapeo de datos"/>
+                <rule defaultRule="true" href="input-mapping/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="input_mapping_ii" name="Mapeo de datos" typeRef="cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML.Input"/>
+        <informationRequirement>
+            <requiredInput href="#input"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output" name="Invocación del modelo ML">
+        <description>Salida del modelo ML</description>
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML.Input" collection="false" name="Mapeo de datos"/>
+                <output bomType="cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML.Output" collection="false" name="Invocación del modelo ML"/>
+                <rule defaultRule="false" href="decisionModel.drl" kind="BusinessRule" name="Prediction"/>
+            </ruleset>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.predictionInvocation"><![CDATA[true]]></property>
+            </properties>
+        </extensionElements>
+        <variable id="output_ii" name="Invocación del modelo ML" typeRef="cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML.Output"/>
+        <informationRequirement>
+            <requiredInput href="#input-mapping"/>
+        </informationRequirement>
+    </decision>
+    <decision id="output-mapping" name="Correlación de salida">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML.Output" collection="false" name="Invocación del modelo ML"/>
+                <output bomType="Probabilidad" collection="false" name="Output mapping"/>
+                <rule defaultRule="true" href="output-mapping/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="output_mapping_ii" name="Correlación de salida" typeRef="Probabilidad"/>
+        <informationRequirement>
+            <requiredInput href="#output"/>
+        </informationRequirement>
+    </decision>
+</definitions></definition>
+</com.ibm.rules.studio.model.decisionmodel:DecisionModel>

@@ -1,0 +1,160 @@
+
+package cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML;
+
+
+public class Error
+        property "ads.typeId" "2"
+        property "de.generated" "true"
+{
+    public string code
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "code";
+    public string message
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "message";
+    public Error(string code, string message)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Error()
+                property "dataio.default" "true";
+}
+
+public class Input
+        property "ads.typeId" "1"
+        property "com.fasterxml.jackson.annotation.JsonPropertyOrder" "{INCOME,YRS_AT_CURRENT_ADDRESS,YRS_WITH_CURRENT_EMPLOYER,NUMBER_OF_CARDS,CREDITCARD_DEBT,LOAN_AMOUNT,CREDIT_SCORE,PROPERTY_VALUE,AREA_AVG_PRICE,LOANS,GENDER,EDUCATION,EMPLOYMENT_STATUS,MARITAL_STATUS,APPLIEDONLINE,RESIDENCE,COMMERCIAL_CLIENT,COMM_FRAUD_INV}"
+        property "de.generated" "true"
+{
+    public object appliedonline
+                property "ads.attributeId" "15"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "APPLIEDONLINE";
+    public java.lang.Double areaAvgPrice
+                property "ads.attributeId" "9"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "AREA_AVG_PRICE";
+    public object commFraudInv
+                property "ads.attributeId" "18"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "COMM_FRAUD_INV";
+    public object commercialClient
+                property "ads.attributeId" "17"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "COMMERCIAL_CLIENT";
+    public java.lang.Long creditScore
+                property "ads.attributeId" "7"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CREDIT_SCORE";
+    public java.lang.Double creditcardDebt
+                property "ads.attributeId" "5"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "CREDITCARD_DEBT";
+    public object education
+                property "ads.attributeId" "12"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "EDUCATION";
+    public object employmentStatus
+                property "ads.attributeId" "13"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "EMPLOYMENT_STATUS";
+    public object gender
+                property "ads.attributeId" "11"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "GENDER";
+    public java.lang.Double income
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "INCOME";
+    public java.lang.Double loanAmount
+                property "ads.attributeId" "6"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "LOAN_AMOUNT";
+    public java.lang.Long loans
+                property "ads.attributeId" "10"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "LOANS";
+    public object maritalStatus
+                property "ads.attributeId" "14"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "MARITAL_STATUS";
+    public java.lang.Long numberOfCards
+                property "ads.attributeId" "4"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "NUMBER_OF_CARDS";
+    public java.lang.Double propertyValue
+                property "ads.attributeId" "8"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "PROPERTY_VALUE";
+    public object residence
+                property "ads.attributeId" "16"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "RESIDENCE";
+    public java.lang.Long yrsAtCurrentAddress
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "YRS_AT_CURRENT_ADDRESS";
+    public java.lang.Long yrsWithCurrentEmployer
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "YRS_WITH_CURRENT_EMPLOYER";
+    public Input(object appliedonline, 
+        java.lang.Double areaAvgPrice, 
+        object commFraudInv, 
+        object commercialClient, 
+        java.lang.Long creditScore, 
+        java.lang.Double creditcardDebt, 
+        object education, 
+        object employmentStatus, 
+        object gender, 
+        java.lang.Double income, 
+        java.lang.Double loanAmount, 
+        java.lang.Long loans, 
+        object maritalStatus, 
+        java.lang.Long numberOfCards, 
+        java.lang.Double propertyValue, 
+        object residence, 
+        java.lang.Long yrsAtCurrentAddress, 
+        java.lang.Long yrsWithCurrentEmployer)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Input()
+                property "dataio.default" "true";
+}
+
+public class Output
+        property "ads.typeId" "3"
+        property "com.fasterxml.jackson.annotation.JsonIgnoreProperties" {
+            ignoreUnknown "true"
+        }
+        property "de.generated" "true"
+{
+    public cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML.Error error
+                property "ads.attributeId" "3"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "error";
+    public java.lang.Long prediction
+                property "ads.attributeId" "1"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "prediction";
+    public java.util.List probability domain 0,* class java.lang.Double
+                property "ads.attributeId" "2"
+                property "com.fasterxml.jackson.annotation.JsonProperty" "probability";
+    public Output(java.lang.Long prediction, 
+        java.util.List probability domain 0,* class java.lang.Double)
+                property autoExpand "true"
+                property beanConstructor "true"
+                property groups "BALA"
+                property prototype "true";
+    public Output()
+                property "dataio.default" "true";
+    public void addTo_probability(java.lang.Double probability)
+                property collectionAttribute "probability"
+                property update "true";
+    public void clear_probability()
+                property collectionAttribute "probability"
+                property update "true";
+    public boolean inError()
+                property "de.generated" {
+                    $gen "com.ibm.decision.ml.integration.xom.InErrorTestGenerator",
+                    $target "BOM"
+                };
+    public void removeFrom_probability(java.lang.Double probability)
+                property collectionAttribute "probability"
+                property update "true";
+    public static Output run(cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML.Input input)
+                property pureFunction "true";
+    public static Output run(com.ibm.decision.run.RunContext runContext, cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML.Input input)
+                property "de.generated" {
+                    $gen "com.ibm.decision.ml.integration.xom.PredictionRunGenerator",
+                    $target "BOM",
+                    providerInfoId "cp4admin/Banco-Pichincha---Demo-de-ADS/ML-Demo16771813530483b603bfd-193f-4c17-9ce7-0ea1447b5712"
+                }
+                property pureFunction "true";
+    public void set_probability(java.util.Collection probability domain 0,* class java.lang.Double)
+                property collectionAttribute "probability"
+                property update "true";
+}
+

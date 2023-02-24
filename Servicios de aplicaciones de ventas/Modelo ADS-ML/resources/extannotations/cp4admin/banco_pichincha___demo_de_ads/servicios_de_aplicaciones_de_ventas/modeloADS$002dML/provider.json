@@ -1,0 +1,9 @@
+{
+  "name" : "cp4admin/Banco-Pichincha---Demo-de-ADS/ML-Demo1677181353048",
+  "type" : "WML",
+  "description" : "",
+  "mlUrl" : "https://us-south.ml.cloud.ibm.com",
+  "authUrl" : "https://iam.bluemix.net/identity/token",
+  "instanceId" : "63cd4640-6ada-43b0-bb0c-a26eadc9bc88",
+  "apiKey" : null
+}

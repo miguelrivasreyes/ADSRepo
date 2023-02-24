@@ -1,0 +1,60 @@
+
+# Term: cliente
+@cliente#gender = MALE
+
+# Term: estado
+@estado#gender = MALE
+
+# Term: salario
+@salario#gender = MALE
+
+# Term: tipo
+@tipo#gender = MALE
+
+# Term: tipo de documento
+@tipo\ de\ documento#gender = MALE
+
+# Term: tipo de tarjeta de credito
+@tipo\ de\ tarjeta\ de\ credito#gender = MALE
+
+# Cliente
+Cliente#concept.label = cliente
+Cliente.Cliente(double,TipoDeDocumento)#phrase.navigation = un nuevo {cliente} en que {0, salario} {1, tipo de documento}
+Cliente.salario#phrase.action = cambiar el salario {this,PARTITIVE_ARTICLE} a {salario}
+Cliente.salario#phrase.addition_setter = añadir {salario} a el salario {this,PARTITIVE_ARTICLE}
+Cliente.salario#phrase.navigation = {salario} {this,PARTITIVE_ARTICLE}
+Cliente.salario#phrase.subtraction_setter = sustraer {salario} de el salario {this,PARTITIVE_ARTICLE}
+Cliente.tipoDeDocumento#phrase.action = cambiar el tipo de documento {this,PARTITIVE_ARTICLE} a {tipo de documento}
+Cliente.tipoDeDocumento#phrase.clearer = borrar el tipo de documento {this,PARTITIVE_ARTICLE}
+Cliente.tipoDeDocumento#phrase.navigation = {tipo de documento} {this,PARTITIVE_ARTICLE}
+
+# Estado
+Estado#concept.documentation = 
+Estado#concept.label = estado
+Estado.APROBADO#instance.label = APROBADO
+Estado.RECHAZADO#instance.label = RECHAZADO
+
+# TarjetaDeCredito
+TarjetaDeCredito#concept.label = tarjeta de credito
+TarjetaDeCredito.TarjetaDeCredito(Estado,TipoDeTarjetaDeCredito)#phrase.navigation = una nueva {tarjeta de credito} en que {0, estado} {1, tipo}
+TarjetaDeCredito.estado#phrase.action = cambiar el estado {this,PARTITIVE_ARTICLE} a {estado}
+TarjetaDeCredito.estado#phrase.clearer = borrar el estado {this,PARTITIVE_ARTICLE}
+TarjetaDeCredito.estado#phrase.navigation = {estado} {this,PARTITIVE_ARTICLE}
+TarjetaDeCredito.tipo#phrase.action = cambiar el tipo {this,PARTITIVE_ARTICLE} a {tipo}
+TarjetaDeCredito.tipo#phrase.clearer = borrar el tipo {this,PARTITIVE_ARTICLE}
+TarjetaDeCredito.tipo#phrase.navigation = {tipo} {this,PARTITIVE_ARTICLE}
+
+# TipoDeDocumento
+TipoDeDocumento#concept.documentation = 
+TipoDeDocumento#concept.label = tipo de documento
+TipoDeDocumento.DNI#instance.label = DNI
+TipoDeDocumento.RUC#instance.label = RUC
+TipoDeDocumento.carnetDeExtranjeria#instance.label = Carnet de Extranjeria
+
+# TipoDeTarjetaDeCredito
+TipoDeTarjetaDeCredito#concept.documentation = 
+TipoDeTarjetaDeCredito#concept.label = tipo de tarjeta de credito
+TipoDeTarjetaDeCredito.BLACK#instance.label = BLACK
+TipoDeTarjetaDeCredito.GOLD#instance.label = GOLD
+TipoDeTarjetaDeCredito.SILVER#instance.label = SILVER
+TipoDeTarjetaDeCredito.ninguna#instance.label = Ninguna

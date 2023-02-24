@@ -7,27 +7,65 @@
     <extensionElements>
         <locale xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" id="es_ES"/>
     </extensionElements>
-    <inputData id="node_0" name="Cliente">
-        <extensionElements>
-            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
-                <output bomType="Cliente" collection="false" name="Cliente"/>
-            </initialization>
-        </extensionElements>
-        <variable id="node_0_ii" name="Cliente" typeRef="Cliente"/>
-    </inputData>
     <decision id="node_1" name="Evaluar cliente">
         <extensionElements>
             <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
-                <input bomType="Cliente" collection="false" name="Cliente"/>
-                <output bomType="TarjetaDeCredito1" collection="false" name="Evaluar cliente"/>
-                <rule defaultRule="false" href="node_1/Por%20salario.dmt" kind="DecisionTable" name="Por salario"/>
-                <rule defaultRule="true" href="node_1/output-default-setting.drl" kind="BusinessRule" name="output-default-setting"/>
+                <input bomType="Probabilidad" collection="false" name="Evaluar respuesta"/>
+                <output bomType="Probabilidad" collection="false" name="Evaluar cliente"/>
             </ruleset>
         </extensionElements>
-        <variable id="node_1_ii" name="Evaluar cliente" typeRef="TarjetaDeCredito1"/>
+        <variable id="node_1_ii" name="Evaluar cliente" typeRef="Probabilidad"/>
         <informationRequirement>
-            <requiredInput href="#node_0"/>
+            <requiredInput href="#node_3"/>
         </informationRequirement>
     </decision>
+    <decision id="node_3" name="Evaluar respuesta">
+        <extensionElements>
+            <ruleset xmlns="http://www.ibm.com/spec/ODM/dmn.xsd" conflictResolution="sequence">
+                <input bomType="Solicitud" collection="false" name="Solicitud"/>
+                <output bomType="Probabilidad" collection="false" name="Evaluar respuesta"/>
+            </ruleset>
+        </extensionElements>
+        <variable id="node_3_ii" name="Evaluar respuesta" typeRef="Probabilidad"/>
+        <informationRequirement>
+            <requiredInput href="#node_4"/>
+        </informationRequirement>
+        <knowledgeRequirement>
+            <requiredKnowledge href="#node_2"/>
+        </knowledgeRequirement>
+    </decision>
+    <inputData id="node_4" name="Solicitud">
+        <extensionElements>
+            <initialization xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <output bomType="Solicitud" collection="false" name="Solicitud"/>
+            </initialization>
+        </extensionElements>
+        <variable id="node_4_ii" name="Solicitud" typeRef="Solicitud"/>
+    </inputData>
+    <businessKnowledgeModel id="node_2" name="Modelo ADS-ML">
+        <extensionElements>
+            <properties xmlns="http://www.ibm.com/spec/ODM/dmn.xsd">
+                <property name="ads.designer.bkKind"><![CDATA[prediction]]></property>
+            </properties>
+        </extensionElements>
+        <variable name="Modelo ADS-ML" typeRef="Probabilidad"/>
+        <encapsulatedLogic typeRef="Probabilidad">
+            <formalParameter name="solicitud" typeRef="Solicitud"/>
+            <context>
+                <contextEntry>
+                    <variable name="class"/>
+                    <literalExpression>
+                        <text>"cp4admin.banco_pichincha___demo_de_ads.servicios_de_aplicaciones_de_ventas.modeloADS$002dML.Modelo_ADS_ML"</text>
+                    </literalExpression>
+                </contextEntry>
+                <contextEntry>
+                    <variable name="method signature"/>
+                    <literalExpression>
+                        <text>"run(Solicitud)"</text>
+                    </literalExpression>
+                </contextEntry>
+            </context>
+        </encapsulatedLogic>
+    </businessKnowledgeModel>
 </definitions></definition>
 </com.ibm.rules.studio.model.decisionmodel:DecisionModel>
